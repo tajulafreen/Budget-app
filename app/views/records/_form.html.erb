@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div class="container justify-center">
   <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
@@ -26,7 +26,8 @@
     <%= form.collection_select :category_id, attributes[1], :id, :name, { prompt: 'Choose category.....' }%>
   </div>
 
-  <div>
+ <div class="container mt-4">
     <%= form.submit "Save", class: 'p-3 btn btn-primary' %>
+  </div>
   </div>
 <% end %>

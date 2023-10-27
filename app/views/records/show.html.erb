@@ -1,0 +1,31 @@
+<div class="navigation py-3 px-3 bg-primary ">
+  <ul class="flex justify-between items-center">
+    <li  class="w-10"><%= link_to image_tag('backarrow.png', alt: 'Back'), category_path(@record.categories[0]), class: 'nav-link' %></li>
+    <h2><strong class="text-white h-2">Show record</strong></h2>
+    <li><%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link text-white h2" %></li>
+  </ul>
+</div>
+<p style="color: green"><%= notice %></p>
+
+<div class="flex flex-col bg-white p-5">
+  <p class="d-flex justify-content-between">
+    <span><strong>Name:</strong></span>
+    <span><%= @record.name %></span>
+  </p>
+  <p class="border p-2 d-flex justify-content-between">
+    <span><strong>Amount:</strong></span>
+    <span>$<%= @record.amount %></span>
+  </p>
+  <p class="border p-2 d-flex justify-content-between">
+    <span><strong>Categories:</strong></span>
+    <span><%= @record.categories[0].name %></span>
+  </p>
+  <p class="p-2 d-flex justify-content-between">
+    <span><strong>Created at:</strong></span>
+    <span><%= @record.created_at %></span>
+  </p>
+</div>
+
+<div class="container">
+  <%= button_to "Delete", @record, method: :delete, class: "btn btn-primary container" %>
+</div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: "welcome#index"
   resources :categories do
-  resources :records, only: [:new, :show]
+    resources :records, only: [:new, :show]
   end
   resources :records, except: [:new, :show, :index]
   # Defines the root path route ("/")

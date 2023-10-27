@@ -1,9 +1,10 @@
-<div class="nav p-5">
-  <ul class="d-flex justify-content-between ">
-    <li><%= link_to image_tag('backarrow.png', alt: 'Back'), categories_path, class: 'nav-link' %></li>
-    <h2><strong>New category</strong></h2>
-    <li><%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %></li>
+<div class="navigation py-3 px-3 bg-primary">
+  <ul class="flex justify-between items-center">
+    <li class="w-10"><%= link_to image_tag('backarrow.png', alt: 'Back'), categories_path, class: 'nav-link' %></li>
+    <h2><strong class="text-white">New category</strong></h2>
+    <li><%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link text-white h-2" %></li>
   </ul>
 </div>
-
+<div class="container border mt-4 p-3">
 <%= render "form", category: @category %>
+</div>
