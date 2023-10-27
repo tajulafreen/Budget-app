@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ps-4">
+  <div class="container">
+    <ul class="navbar-nav d-flex display-6 justify-content-center">
+  <li class="nav-item"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><%= link_to 'Sign in', root_path,  class: 'nav-link' %></span>
+    </button></li>
+      <li class="nav-item"><i class="fa-solid fa-arrow-left text-white"></i> </li>
+      <li class="nav-item"><h2><strong class="text-white">Categories</strong></h2></li>
+      <li class="nav-item "><h3><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: "text-white nav-link" %></h3></li>
+      </ul>
+ 
+    
+    </div>
+    </nav>
+    <section class="p-5">
+      <p style="color: green"><%= notice %></p>
+      <div id="categories">
+        <% @categories.each do |category| %>
+          <a href="<%= category_path(category) %>" class="m-1">
+            <%= render category %>
+          </a>
+        <% end %>
+      </div>
+    </section>
+ 
+
+  <footer class="text-center mt-4">
+    <%= link_to new_category_path do %>
+      <div class="w-full green-btn flex">
+        <button class="p-2 m-4 btn btn-primary">
+          <strong>Add a New Category</strong>
+        </button>
+      </div>
+    <% end %>
+  </footer>

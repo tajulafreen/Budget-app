@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-between">
+  <div>
+    <div class="navbar nav">
+      <ul class="d-flex justify-content-between">
+        <li class="w-10"><%= link_to image_tag('backarrow.png', alt: 'Back'), categories_path, class: 'nav-link' %></li>
+        <h2><strong><%= @category.name %></strong></h2>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %></li>
+      </ul>
+    </div>
+    <p style="color: green"><%= notice %></p>
+
+    <%= render @category %>
+    <section class="px-5">
+      <div>
+        <% @records.each do |record| %>
+          <a href="<%= category_record_path(@category, record) %>" class="m-1">
+          <%= render "records/record", record: record %>
+          </a>
+        <% end %>
+      </div>
+    </section>
+  </div>
+
+  <section class="flex flex-col space-y-2 p-5">
+      <a href="<%= new_category_record_path(@category) %>" class="">
+        <button data-testid="new-record-button" class="btn btn-primary">
+          New record
+        </button>
+      </a>
+
+      <%= link_to edit_category_path(@category) do %>
+        <button data-testid="edit-category-button" class="btn btn-primary">Edit category</button>
+      <% end %>
+      <%= button_to "Delete category", @category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+    </section>
+  </div>

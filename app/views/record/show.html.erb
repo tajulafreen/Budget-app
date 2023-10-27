@@ -1,0 +1,31 @@
+<div class="navbar nav p-3 ">
+  <ul class="d-flex justify-content-between ">
+    <li><%= link_to image_tag('backarrow.png', alt: 'Back'), category_path(@purchase.categories[0]), class: 'nav-link' %></li>
+    <h2><strong>Show purchase</strong></h2>
+    <li><%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %></li>
+  </ul>
+</div>
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex bg-white p-5">
+  <p class="d-flex justify-content-between">
+    <span><strong>Name:</strong></span>
+    <span><%= @purchase.name %></span>
+  </p>
+  <p class="border p-2 d-flex justify-content-between">
+    <span><strong>Amount:</strong></span>
+    <span>$<%= @purchase.amount %></span>
+  </p>
+  <p class="border p-2 d-flex justify-content-between">
+    <span><strong>Categories:</strong></span>
+    <span><%= @purchase.categories[0].name %></span>
+  </p>
+  <p class="p-2 d-flex justify-content-between">
+    <span><strong>Created at:</strong></span>
+    <span><%= @purchase.created_at %></span>
+  </p>
+</div>
+
+<div>
+  <%= button_to "Delete", @purchase, method: :delete, class: "m-5 btn btn-territory" %>
+</div>
