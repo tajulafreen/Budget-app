@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Records</h1>
+
+<div>
+  <% @records.each do |record| %>
+    <%= render record %>
+    <p>
+      <%= link_to "Show this record", record %>
+    </p>
+  <% end %>
+</div>
+

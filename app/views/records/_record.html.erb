@@ -1,0 +1,16 @@
+<div id="<%= dom_id record %>" class="container bg-white d-flex p-3 justify-content-between">
+<div>
+  <p>
+    <strong><%= record.name %></strong>
+  </p>
+
+  <p>
+    <span><%= record.created_at.strftime('%d %b %Y') %></span>
+  </p>
+</div>
+
+  <p>
+    $<%= record.amount %>
+  </p>
+
+</div>
