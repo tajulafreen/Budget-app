@@ -119,7 +119,7 @@ run the test with:
 ```
 
 ## 💻 Deployment <a name="getting-started"></a>
-- Presentation: [Presentation](https://drive.google.com/file/d/1k87d1bscWmisrPjNuKL0v9teDV7g644B/view?usp=sharing)
+
 - Deployment: [Deployment](https://budget-app-6y90.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
