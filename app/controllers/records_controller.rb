@@ -26,7 +26,8 @@ class RecordsController < ApplicationController
   def create
     @attributes = []
     @record = Record.new(record_fields)
-    @record.author = current_user
+    # @record.author = current_user
+    @record.author_id = current_user.id
     category_id = params[:record][:category_id]
     if category_id.present?
       category = Category.find(category_id)

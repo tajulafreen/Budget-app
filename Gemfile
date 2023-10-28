@@ -71,5 +71,5 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
 end
-
+gem 'faker'
 gem 'tailwindcss-rails', '~> 2.0'
