@@ -7,6 +7,5 @@ Rails.application.routes.draw do
     resources :records, only: [:new, :show]
   end
   resources :records, except: [:new, :show, :index]
-  # Defines the root path route ("/")
-  # root "posts#index"
+  
 end
