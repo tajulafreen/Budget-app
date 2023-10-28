@@ -10,6 +10,7 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+- [Demo](#💻-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -21,7 +22,7 @@
 
 # 📖 [Budget App] <a name="about-project"></a>
 
-**[Budgt App]** Budget Me App is a fully functioning website that allows a user to fully manage his/her expenses by keeping track of all payments and their related categories. For each category the user can see how much is already spent. A user can add categories and payments related to one or more categories.
+**[Budgt App]** Budget App is a fully functioning website that allows a user to fully manage his/her expenses by keeping track of all payments and their related categories. For each category the user can see how much is already spent. A user can add categories and payments related to one or more categories.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -116,6 +117,11 @@ run the test with:
 ```sh
   rspec spec
 ```
+
+## 💻 Deployment <a name="getting-started"></a>
+- Presentation: [Presentation](https://drive.google.com/file/d/1k87d1bscWmisrPjNuKL0v9teDV7g644B/view?usp=sharing)
+- Deployment: [Deployment](https://budget-app-6y90.onrender.com)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
