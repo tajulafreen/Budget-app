@@ -2,23 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
-}
-
-*/
-.create_category_btn
- {
-  background-color: rgb(100, 182, 37);
-  color: white;
-  text-decoration: none;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-}
