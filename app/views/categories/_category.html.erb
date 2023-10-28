@@ -1,0 +1,19 @@
+<div id="<%= dom_id category %>" class="d-flex justify-content-between p-3">
+    <% if category.icon.present? %>
+        <%= image_tag category.icon, alt: category.name, class: 'w-16 rounded' %>
+    <% end %>
+
+  <div style="width: 80%;">
+    <div class="d-flex justify-content-between border container-fluid p-3">
+    
+      <strong><%= category.name %></strong>
+    
+      <strong>Total: $<%= category.records.sum(:amount) %></strong>
+    
+    </div>
+
+    <p>
+    <span><%= category.created_at.strftime('%d %b %Y') %></span>
+    </p>
+  </div>
+</div>
