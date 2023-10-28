@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.describe 'records/index', type: :feature do
   before(:each) do
     @user = User.create(id: '4', name: 'Hammas', email: 'hammas@gmail.com', password: 'hammas')
-    @category = Category.create(id: '4',name: 'Office Payments', icon: 'https://avatars.githubusercontent.com/u/119053190?v=4', user: @user)
-    @record = Record.create(id: '5',name: 'Over Time', amount: 200, author_id: @user.id)
+    @category = Category.create(id: '4', name: 'Office Payments',
+                                icon: 'https://avatars.githubusercontent.com/u/119053190?v=4', user: @user)
+    @record = Record.create(id: '5', name: 'Over Time', amount: 200, author_id: @user.id)
     visit new_user_session_path
     fill_in 'Email', with: 'hammas@gmail.com'
     fill_in 'Password', with: 'hammas'
@@ -21,7 +22,7 @@ RSpec.describe 'records/index', type: :feature do
     it 'should contain sign out button' do
       expect(page).to have_content 'Sign out'
     end
-    
+
     it 'should have transaction amount' do
       expect(page).to have_content '$0'
     end

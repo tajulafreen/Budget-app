@@ -1,11 +1,11 @@
-
 require 'rails_helper'
 
 RSpec.describe 'categories/index', type: :feature do
   before(:each) do
     @user = User.create(id: '3', name: 'Hammas', email: 'hammas@gmail.com', password: 'hammas')
     # @user.confirm
-    @category = Category.create(id: '3', name: 'Office Payments', icon: 'https://avatars.githubusercontent.com/u/119053190?v=4', user: @user)
+    @category = Category.create(id: '3', name: 'Office Payments',
+                                icon: 'https://avatars.githubusercontent.com/u/119053190?v=4', user: @user)
     visit new_user_session_path
     fill_in 'Email', with: 'hammas@gmail.com'
     fill_in 'Password', with: 'hammas'
