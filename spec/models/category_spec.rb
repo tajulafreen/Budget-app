@@ -12,7 +12,3 @@ RSpec.describe Category, type: :model do
     it { should validate_presence_of(:icon) }
   end
 end
-
-
-
-
